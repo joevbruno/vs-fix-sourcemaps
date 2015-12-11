@@ -23,6 +23,7 @@ In your Webpack config file, under [plugins](https://webpack.github.io/docs/conf
 ```
 import VSFixSourceMapsPlugin from 'vs-fix-sourcemaps';
 ...
+  devtool: 'source-map',
   plugins: [
     new VSFixSourceMapsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(), 
