@@ -1,6 +1,6 @@
 {
   "name": "vs-fix-sourcemaps",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A Webpack plugin that fixes javascript sourcemaps in Visual Studios (2015), allowing for JSX and JS debugging directly in Visual Studios.",
   "main": "index.js",
   "scripts": {
