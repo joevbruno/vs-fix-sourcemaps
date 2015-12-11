@@ -18,6 +18,9 @@ If you are installing this plugin, you are most likely using IE. Make sure you a
 
 ### Usage
 
+```
+npm install --save-dev vs-fix-sourcemaps
+```
 In your Webpack config file, under [plugins](https://webpack.github.io/docs/configuration.html#plugins), add this plugin:
 
 ```
