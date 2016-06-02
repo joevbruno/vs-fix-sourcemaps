@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/joevbruno/vs-fix-sourcemaps/issues"
   },
-  "homepage": "https://github.com/joevbruno/vs-fix-sourcemaps#readme"
+  "homepage": "https://github.com/joevbruno/vs-fix-sourcemaps#readme",
+  "dependencies": {
+    "vlq": "^0.2.1"
+  }
 }
