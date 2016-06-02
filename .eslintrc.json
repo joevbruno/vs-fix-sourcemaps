@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "mocha": true
+  },
+  "rules": {
+    "func-names": 0,
+    "comma-dangle": 0,
+    "react/jsx-first-prop-new-line" : 0,
+    "react/prefer-stateless-function": 0,
+    "no-underscore-dangle": 0,
+    "no-console": 0,
+    "no-param-reassign": 0,
+    "consistent-return": 0,
+    "max-len": ["error", 140, 2]
+  },
+  "extends": "airbnb",
+  "ecmaFeatures": {
+    "modules": true,
+    "jsx": true,
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parser": "babel-eslint"
+}
