@@ -25,7 +25,7 @@ describe('Visual Studio: Source Map Tests', function() { // eslint-disable-line
     const workingConfig = { ...webpackConfig, entry: [path.resolve(__dirname, 'data.js')] };
     workingConfig.output.path = path.resolve(__dirname, './valid');
     workingConfig.output.sourceMapFilename = 'main.bundle.json';
-    workingConfig.plugins.push(new VSFixSourceMapsPlugin({ debug: true }));
+    workingConfig.plugins.push(new VSFixSourceMapsPlugin({ debug: true, verbose: true }));
     webpack(workingConfig, (error, stats) => {
       if (error || stats.hasErrors()) throw new Error('Something went wrong');
       const validSourceMap = require('./valid/main.bundle.json'); // eslint-disable-line

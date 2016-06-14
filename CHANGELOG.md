@@ -1,3 +1,6 @@
+#1.0.1
+Added debugging and verbose options for console output
+
 #1.0.0
 Uses VLQ parsings and removes loner segments that break visual studio. Much better support now. Added tests.
 

@@ -1,8 +1,8 @@
 {
   "name": "vs-fix-sourcemaps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Webpack plugin that fixes javascript sourcemaps in Visual Studio (2015), allowing for JSX and JS debugging directly in Visual Studio.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "tests": "mocha ./__tests__/*.spec.js --compilers js:babel-core/register --timeout 15000:",
     "compile": "babel src/index.js -o dist/index.js",

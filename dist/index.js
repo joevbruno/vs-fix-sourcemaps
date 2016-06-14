@@ -55,13 +55,19 @@ function processMappingLine(line, debug) {
 }
 
 function VSFixSourceMapsPlugin(options) {
-  if (options.debug === true) {
+  this.debug = false;
+  this.verbose = false;
+  if (options && options.verbose === true) {
+    this.verbose = true;
+  }
+  if (options && options.debug === true) {
     this.debug = true;
   }
 }
 
 VSFixSourceMapsPlugin.prototype.apply = function (compiler) {
   var debug = this.debug;
+  var verbose = this.verbose;
   var mapRegEx = new RegExp('.map$');
   if (debug === true) {
     mapRegEx = new RegExp('.json$');
@@ -73,7 +79,7 @@ VSFixSourceMapsPlugin.prototype.apply = function (compiler) {
           var assetSourceMaps = assets[asset]._value; // eslint-disable-line
           var parsedSourceMaps = JSON.parse(assetSourceMaps);
           parsedSourceMaps.mappings = parsedSourceMaps.mappings.split(';').map(function (line) {
-            return processMappingLine(line, debug);
+            return processMappingLine(line, verbose);
           }).join(';');
           var reSerializedSourceMaps = JSON.stringify(parsedSourceMaps);
           assets[asset]._value = reSerializedSourceMaps;
